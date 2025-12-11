@@ -1,11 +1,16 @@
-# Manipulator Arm Robot: Pick, Place and Homing Task
-
-This repository contains MATLAB scripts for controlling a robot's pick-and-place behavior. The system includes inverse kinematics calculations, homing behavior, PID control for smooth motion, and user-defined position inputs. The scripts are designed to operate a robot gripper for picking up and placing objects at specific positions within its workspace.
-
----
+# Manipulator Robot – Inverse Kinematics and PID-Controlled Pick-and-Place (LEGO EV3)
+As part of the Mechatronic System Laboratory at the University of Siegen, I developed a fully automated pick-and-place system using a 3-DOF LEGO Mindstorms EV3 manipulator controlled from MATLAB. The goal was to derive the inverse kinematics of the arm and implement robust behaviours for homing, picking, placing, and retracting a ball between three workstations (A, B, C).
 A video demonstration of the task can be found on my Youtube Channel- at this link: https://www.youtube.com/watch?v=xFHLHVooJJU
 
 ---
+
+## Key aspects:
+* Derived closed-form inverse kinematics equations to map Cartesian target points to joint angles for the manipulator.
+* Implemented a homing routine with touch sensors and motor encoders to establish a consistent mechanical zero position.
+* Designed and tuned a discrete PID controller for joint motors B and C, including gear-ratio offsets, speed limits, and 1° position tolerance.
+* Developed modular MATLAB scripts (`Homing`, `Inverse_Kinematics`, `Pick_Place_Behaviour`, `Gripper`, `UserInput`) for trajectory execution, gripper control, and optional user-defined waypoints in the workspace.
+* Validated the system by repeatedly transporting the ball between stations A, B, and C with stable motion profiles and reproducible positioning.
+
 
 
 ## Scripts Overview
